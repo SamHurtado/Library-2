@@ -13,13 +13,13 @@ else if (filter === 'RATING' ) {
     books.sort((a, b) => b.rating - a.rating)
 }
 
-let ratingHTML = '';
-for (let i = 0; i < Math.floor(rating); ++i) {
-    ratingHTML += '<i class="fa-solid fa-star"></i>\n'
-}
-if (!Number.isInteger(rating)) {
-    ratingHTML += '<i class="fa-solid fa-star-half"></i>\n'
-}
+// let ratingHTML = '';
+// for (let i = 0; i < Math.floor(rating); ++i) {
+//     ratingHTML += '<i class="fa-solid fa-star"></i>\n'
+// }
+// if (!Number.isInteger(rating)) {
+//     ratingHTML += '<i class="fa-solid fa-star-half"></i>\n'
+// }
 
     const booksHtml = books
     .map((book) => {
@@ -31,7 +31,7 @@ if (!Number.isInteger(rating)) {
     ${book.title}
     </div>
     <div class="book__ratings">
-    ${ratingHTML(book.rating)}
+    ${ratingsHTML(book.rating)}
     </div>
 <div class="book__price">
     // <span>$${book.originalPrice.toFixed(2)}</span>
