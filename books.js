@@ -7,7 +7,7 @@ async function renderBooks(filter) {
 if (!books) {
     books = await getBooks();
 }
-   booksWrapper.classList.remove('books__loading')
+   document.body.classList.remove('books__loading')
 
 if (filter === 'LOW_TO_HIGH') {
     books.sort((a, b) => (a. salePrice || a.originalPrice) - (b.salePrice || b.originalPrice))
@@ -79,7 +79,7 @@ setTimeout(() => {
 function getBooks() {
    return new Promise ((resolve) => {
         setTimeout(() => {
-           resolve() ([
+           resolve([
              {
       id: 1,
       title: "Crack the Coding Interview",
